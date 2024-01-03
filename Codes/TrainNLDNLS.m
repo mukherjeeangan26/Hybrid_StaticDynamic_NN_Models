@@ -48,6 +48,7 @@ while iter <= maxiter && term_crit >= tol
     netnarx_d.inputs{1}.processFcns = {'removeconstantrows','mapminmax'};
     netnarx_d.trainParam.epochs = 2000;
     netnarx_d.trainParam.max_fail = 1000;
+    netnarx_d.divideFcn = 'divideblock';
     netnarx_d.layers{1}.transferFcn = 'tansig';
     netnarx_d.layers{2}.transferFcn = 'purelin';
 
