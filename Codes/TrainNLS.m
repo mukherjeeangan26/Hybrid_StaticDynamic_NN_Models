@@ -2,7 +2,7 @@ function [ynn_t,nn_stat] = TrainNLS(Imat_t,dsr_t,nh,no)
 
 u = Imat_t;
 
-net_s = newff(Imat_t,dsr_t,[nh, no],{'logsig','logsig'},'trainlm');
+net_s = newff(Imat_t,dsr_t,nh,{'logsig','logsig'},'trainlm');
 
 net_s.trainParam.max_fail = 1000;
 
