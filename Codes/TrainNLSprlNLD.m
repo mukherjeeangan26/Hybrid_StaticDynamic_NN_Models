@@ -7,7 +7,7 @@ u_s = Imat_t;
 u_d = Imat_t;
 dsr_t_s = dsr_t;
 
-net_s = newff(Imat_t,dsr_t,[nh, no],{'logsig','purelin'},'trainlm');
+net_s = newff(Imat_t,dsr_t,nh,{'logsig','purelin'},'trainlm');
 net_s.trainParam.max_fail = 1000;
 
 % Initializing the Termination Criteria
