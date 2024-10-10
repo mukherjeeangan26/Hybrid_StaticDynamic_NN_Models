@@ -9,7 +9,7 @@ check1 = Inf;
 
 x_in = Imat_t;
 
-net_s = newff(Imat_t,dsr_t,nh,{'logsig','logsig'},'trainlm');
+net_s = newff(Imat_t,int_mat_1,nh,{'logsig','logsig'},'trainlm');
 net_s.trainParam.max_fail = 1000;
 
 % Initializing the Termination Criteria
