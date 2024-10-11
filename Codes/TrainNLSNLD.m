@@ -9,8 +9,10 @@ check1 = Inf;
 
 x_in = Imat_t;
 
-net_s = newff(Imat_t,int_mat_1,nh,{'logsig','logsig'},'trainlm');
-net_s.trainParam.max_fail = 1000;
+net_s = feedforwardnet(2*nh,'trainlm');
+net_s.layers{1}.transferFcn = 'logsig';
+net_s.layers{2}.transferFcn = 'purelin';
+net_s.trainParam.max_fail = 2000;
 
 % Initializing the Termination Criteria
 
